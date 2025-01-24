@@ -1,7 +1,7 @@
 import logging
 
 
-def setup_logging(log_file: str = "bot.log"):
+def setup_logging():
     """
     Настройка логирования для записи в файл и вывода в терминал.
 

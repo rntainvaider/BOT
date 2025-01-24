@@ -20,12 +20,6 @@ async def main():
 
 
 if __name__ == "__main__":
-    # # Влючаем логирование, чтобы не пропускать важных сообщений и запись в файл
-    # logging.basicConfig(
-    #     # filename="app.log",
-    #     level=logging.INFO,
-    #     # format="%(asctime)s - %(levelname)s - %(message)s",
-    # )
     # Настройка логирования
     setup_logging()
     try:
