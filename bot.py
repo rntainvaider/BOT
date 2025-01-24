@@ -1,5 +1,5 @@
-from aiogram import Bot, Dispatcher, types
-from aiogram.filters.command import Command
+from aiogram import Bot, Dispatcher
+from aiogram.types import BotCommand
 from handlers import start
 from config import API_TOKEN
 from utils.log import setup_logging
@@ -15,6 +15,11 @@ async def main():
 
     # Регистрируем обработчики из других файлов
     dp.include_router(start.router)
+
+    # Устанавливаем команды для бота
+    await bot.set_my_commands(
+        [BotCommand(command="/start", description="Начало работы")]
+    )
 
     await dp.start_polling(bot)
 
